@@ -1,0 +1,62 @@
+\documentclass{../local}
+
+\title{\textbf{Active Emergency Evacuation}\\asdf}
+\author{\\
+		Hogeschool Utrecht\\
+		\\
+		Roy Scheefhals - 1563303}
+
+\begin{document}
+ 
+\maketitle
+\newpage\null\thispagestyle{empty}
+
+\renewcommand{\thesection}{\Roman{section}}
+
+\section*{Versiebeheer}
+\begin{tabular}{ | l | l | l | p{7.5cm} |}
+\hline
+Versie & Wanneer & Wat \\ \hline
+0.1 & 05-03-2014 & Eerste opzet document\\ \hline
+0.2 & 07-03-2014 & Achtergrond Project v1\\ \hline
+
+\end{tabular}
+\clearpage
+
+\chapter{Samenvatting}
+\subfile{Samenvatting}
+\clearpage
+
+\chapter{Inleiding}
+\subfile{Inleiding}
+\clearpage
+
+\newpage\null\thispagestyle{empty}
+
+\renewcommand{\thesection}{\arabic{section}}
+
+% inhoud
+\thispagestyle{empty}
+\setcounter{page}{0}
+\tableofcontents
+\clearpage
+
+\chapter{Achtergrond van Project} 
+\subfile{Achtergrond}
+
+\chapter{Vooronderzoek}
+\subfile{Vooronderzoek}
+
+\chapter{Opdracht Definitie}
+\subfile{Opdracht}
+
+%References
+%\bibliographystyle{plain}
+%\bibliography{bib}
+\subfile{Bibliography}
+
+%\begin{appendices}
+%\subfile{Appendix}
+%\end{appendices}
+
+\end{document}
