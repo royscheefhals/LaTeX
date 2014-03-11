@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TexmakerSession quickmode="3">
-    <document bookmark1="0" file="D:\sources\LaTeX\PvA\tex\pva-main.tex" bookmark2="0" bookmark3="0" line="14" master="false" hasfocus="true"/>
-    <document bookmark1="0" file="D:/sources/LaTeX/PvA/tex/Bibliography.tex" bookmark2="0" bookmark3="0" line="0" master="false" hasfocus="false"/>
-    <document bookmark1="0" file="D:/sources/LaTeX/PvA/tex/Achtergrond.tex" bookmark2="0" bookmark3="0" line="0" master="false" hasfocus="false"/>
-    <document bookmark1="0" file="D:/sources/LaTeX/PvA/tex/Inleiding.tex" bookmark2="0" bookmark3="0" line="0" master="false" hasfocus="false"/>
-    <document bookmark1="0" file="D:/sources/LaTeX/PvA/tex/Opdracht.tex" bookmark2="0" bookmark3="0" line="0" master="false" hasfocus="false"/>
-    <document bookmark1="0" file="D:/sources/LaTeX/PvA/tex/Samenvatting.tex" bookmark2="0" bookmark3="0" line="0" master="false" hasfocus="false"/>
-    <document bookmark1="0" file="D:/sources/LaTeX/PvA/tex/Vooronderzoek.tex" bookmark2="0" bookmark3="0" line="0" master="false" hasfocus="false"/>
+    <document bookmark1="0" master="true" file="D:\sources\LaTeX\PvA\tex\pva-main.tex" bookmark2="0" bookmark3="0" hasfocus="true" line="14"/>
+    <document bookmark1="0" master="false" file="D:/sources/LaTeX/PvA/tex/Achtergrond.tex" bookmark2="0" bookmark3="0" hasfocus="false" line="0"/>
+    <document bookmark1="0" master="false" file="D:/sources/LaTeX/PvA/tex/Bibliography.tex" bookmark2="0" bookmark3="0" hasfocus="false" line="0"/>
+    <document bookmark1="0" master="false" file="D:/sources/LaTeX/PvA/tex/Inleiding.tex" bookmark2="0" bookmark3="0" hasfocus="false" line="0"/>
+    <document bookmark1="0" master="false" file="D:/sources/LaTeX/PvA/tex/Samenvatting.tex" bookmark2="0" bookmark3="0" hasfocus="false" line="0"/>
+    <document bookmark1="0" master="false" file="D:/sources/LaTeX/PvA/tex/Opdracht.tex" bookmark2="0" bookmark3="0" hasfocus="false" line="0"/>
+    <document bookmark1="0" master="false" file="D:/sources/LaTeX/PvA/tex/Vooronderzoek.tex" bookmark2="0" bookmark3="0" hasfocus="false" line="15"/>
 </TexmakerSession>
