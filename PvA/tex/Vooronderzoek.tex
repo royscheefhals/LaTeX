@@ -4,24 +4,30 @@ Aangezien de opdracht zelf bedacht is en meer een richting specificeert, moeten 
 Aan dit vooronderzoek kan een onderzoeksvraag worden gekoppeld, namelijk: 
 \textbf{Is een Wireless Sensor Network (WSN) geschikt voor het aangeven van vluchtroutes aan personen in een noodsituatie?}
 
-In de volgende secties wordt er literatuur onderzocht naar bestaande systemen en voorafgaand onderzoek om de onderzoeksvraag te beantwoorden. In dit hoofdstuk wordt dit geanalyseerd en verwerkt om tot een antwoord te komen. Met dit antwoord kunnen de requirements met meer zekerheid worden opgesteld.
+In de volgende secties wordt er literatuur onderzocht naar voorafgaand onderzoek en huidige systemen om deze onderzoeksvraag te beantwoorden. In dit hoofdstuk wordt de gevonden informatie verwerkt om tot een antwoord te komen. Met dit antwoord kunnen de requirements met meer zekerheid worden opgesteld.
 
 \section{Bestaande systemen}
-Ander vooronderzoek dat is gedaan is het onderzoek naar bestaande systemen gerelateerd aan de opdracht. 
+Belangrijk voor dit project is om te weten of er al bestaande systemen zijn die lijken of hetzelfde zijn als het uitgangspunt voor dit project. 
 
-Een ander branddetectiesysteem gebruik makend van WSN, is FireGrid\cite{FireGrid}. FireGrid gebruikt WSN in gebouwen in combinatie met Grid Computing om gebouwen of omgevingen te monitoren. Dit doen zij alleen wel via een gecentraliseerde oplossing. In die opstelling zal er dan een high performance computer zijn die alle sensor data verzamelt en de benodigde simulaties uitvoert. In een omgeving die robuust moet zijn in gevaarlijke omgevingen is dat een probleem. Als er namelijk netwerk problemen zijn op die locatie, of de brand bevind zich op die locatie, kan het gehele systeem uitvallen. 
+%firegrid
+Een branddetectiesysteem gebruik makend van WSN, is FireGrid\footnote{http://www.firegrid.org/}\cite{FireGrid}. FireGrid gebruikt WSN in gebouwen in combinatie met High Performance Computing om gebouwen of omgevingen te monitoren. FireGrid bestaat grotendeels uit de integratie van verschillende technologieën. Het maakt gebruik van simulatie software, wireless sensors en informatie over de omgeving om een begonnen brand te monitoren en de verspreiding te kunnen voorspellen. 
 
-%NEMBES
-%FINDER
-%FireNet?
-%die ene powerpoint
+%firenet
+Een andere richting binnen het onderwerp, is het helpen van de reddingswerkers bij een brand. FireNet 
+\cite{ShaWSN} presenteert een oplossing die brandweerkorpsen moet helpen om zijn personeel binnen een brand gebied te volgen. De vitale informatie van een brandweerman wordt gemonitord en gestuurd naar een centraal punt (brandweer kazerne, brandweer wagen) voor analyse en verdere actie. Daarbij wordt er ook omgevingsdata zoals temperatuur, luchtvochtigheid en rookdichtheid gemeten.
 
-\section{Haalbaarheid Uitgangspunt}
-Het idee om een gedistribueerd WSN te gebruiken die helpt bij de navigatie van personen bij een noodsituatie is een zelf bedacht idee. Om te controleren of dit een waardig idee is, is er onderzoek gedaan naar eerder uitgevoerde onderzoeken naar dit idee.
+Als FireGrid wordt vergeleken met de opdracht beschreven in sectie 1.3, mist FireGrid het 'gedecentraliseerde' onderdeel. Het gebruik van een High Performance computer impliceert dat alle navigatie berekeningen worden gedaan op één punt, wat leidt tot een 'single point of failure'. Het geeft aan dat detectie en voorspelling van manifestatie van branden kunnen worden uitgevoerd door WSN's.
 
-Het artikel 'Emergency Evacuation using Wireless Sensor Networks'\cite{BarnesEmEv} beschrijft het idee om een gedistribueerd WSN te gebruiken bij evacuatie. Het artikel beschrijft een algoritme die een route berekend naar bepaalde uitgangspunten binnen een netwerk, rekening houdend met het vermijden van de positie van de positie van het gevaar.
+FireNet zijn scope omvat niet het navigeren van personen die moeten evacueren. Het is wel mogelijk om het concept beschreven in dat artikel te integreren binnen een evacuatie systeem. In het geval van deze opdracht ligt de scope op de personen binnen de gevarenzone naar buiten te evacueren. Na deze evacuatie is het systeem bruikbaar voor andere doeleinden. Het systeem wat in dit project wordt beschreven kan worden uitgebreid met de functionaliteiten van FireNet.
 
-%ANDERS VERWOORDEN
-%Dit artikel beschrijft grotendeels de set aan requirements die gedefinieerd zijn. Het beschrijft de benodigdheden om een decentraal WSN op te zetten. 
+\section{Literatuur onderzoek}
+De besproken bestaande systemen besproken in de vorige sectie geven een beeld dat er onderzoek is gedaan en er systemen zijn ontwikkeld binnen het onderwerp. Deze systemen zijn nog niet directe oplossingen voor dit project. In deze sectie wordt er andere relevante literatuur besproken.
+
+
+
+Het artikel 'Emergency Evacuation using Wireless Sensor Networks'\cite{BarnesEmEv} beschrijft een ontwerp om een gedistribueerd WSN te gebruiken bij evacuatie. Het artikel beschrijft een algoritme die een route berekend naar bepaalde uitgangspunten binnen een netwerk, rekening houdend met het vermijden van de positie van de positie van het gevaar. Deze algoritme gebruikt gebruikt geen centraal systeem die het algoritme uitvoert, maar het algoritme wordt per module binnen het netwerk uitgevoerd. 
+
+\section{Conclusie}
+
 
 \end{document}
