@@ -1,8 +1,13 @@
 \begin{document}
+%todo: rephrase deze inleiding yo
 Aangezien de opdracht zelf bedacht is en meer een richting specificeert, moeten er requirements worden opgesteld. Voor en tijdens het opstellen van de requirements is dan ook vooronderzoek gedaan naar het onderwerp. Dit is gedaan om het project uitvoerbaar te maken en houden.
 
 Aan dit vooronderzoek kan een onderzoeksvraag worden gekoppeld, namelijk: 
-\textbf{Is een Wireless Sensor Network (WSN) geschikt voor het aangeven van vluchtroutes aan personen in een noodsituatie?}
+\textbf{Is een (decentraal) Wireless Sensor Network (WSN) geschikt voor het tonen van vluchtroutes aan personen in een noodsituatie?} Met bijbehorende deelvragen:
+\begin{itemize}
+\item Zijn huidige technieken om WSN's mogelijk te maken robuust genoeg om als veiligheidssysteem te dienen?
+\item Is de hardware voor WSN's geschikt om routes te berekenen voor evacuatie?
+\end{itemize}
 
 In de volgende secties wordt er literatuur onderzocht naar voorafgaand onderzoek en huidige systemen om deze onderzoeksvraag te beantwoorden. In dit hoofdstuk wordt de gevonden informatie verwerkt om tot een antwoord te komen. Met dit antwoord kunnen de requirements met meer zekerheid worden opgesteld.
 
@@ -12,22 +17,49 @@ Belangrijk voor dit project is om te weten of er al bestaande systemen zijn die 
 %firegrid
 Een branddetectiesysteem gebruik makend van WSN, is FireGrid\footnote{http://www.firegrid.org/}\cite{FireGrid}. FireGrid gebruikt WSN in gebouwen in combinatie met High Performance Computing om gebouwen of omgevingen te monitoren. FireGrid bestaat grotendeels uit de integratie van verschillende technologieën. Het maakt gebruik van simulatie software, wireless sensors en informatie over de omgeving om een begonnen brand te monitoren en de verspreiding te kunnen voorspellen. 
 
+Als FireGrid wordt vergeleken met de opdracht beschreven in sectie 1.3, mist FireGrid het 'gedecentraliseerde' onderdeel. Het gebruik van een High Performance computer impliceert dat alle navigatie berekeningen worden gedaan op één punt, wat leidt tot een 'single point of failure'. Het geeft aan dat detectie en voorspelling van manifestatie van branden kunnen worden uitgevoerd door WSN's.
+
 %firenet
 Een andere richting binnen het onderwerp, is het helpen van de reddingswerkers bij een brand. FireNet 
 \cite{ShaWSN} presenteert een oplossing die brandweerkorpsen moet helpen om zijn personeel binnen een brand gebied te volgen. De vitale informatie van een brandweerman wordt gemonitord en gestuurd naar een centraal punt (brandweer kazerne, brandweer wagen) voor analyse en verdere actie. Daarbij wordt er ook omgevingsdata zoals temperatuur, luchtvochtigheid en rookdichtheid gemeten.
 
-Als FireGrid wordt vergeleken met de opdracht beschreven in sectie 1.3, mist FireGrid het 'gedecentraliseerde' onderdeel. Het gebruik van een High Performance computer impliceert dat alle navigatie berekeningen worden gedaan op één punt, wat leidt tot een 'single point of failure'. Het geeft aan dat detectie en voorspelling van manifestatie van branden kunnen worden uitgevoerd door WSN's.
-
 FireNet zijn scope omvat niet het navigeren van personen die moeten evacueren. Het is wel mogelijk om het concept beschreven in dat artikel te integreren binnen een evacuatie systeem. In het geval van deze opdracht ligt de scope op de personen binnen de gevarenzone naar buiten te evacueren. Na deze evacuatie is het systeem bruikbaar voor andere doeleinden. Het systeem wat in dit project wordt beschreven kan worden uitgebreid met de functionaliteiten van FireNet.
 
+%NEMBES
+Een ander project die zich richt op reactie bij brand is NEMBES.\cite{NEMBES} NEMBES richt zich op rampenbestrijding binnen gebouwen, door vergemakkelijking van efficiënte evacuatie en redding. Hieruit zijn meerdere technieken ontwikkeld om WSN's geschikt te maken voor evacuatie en/of redding. Deze technieken zijn gepubliceerd en relevante technieken worden besproken in de volgende sectie.
+
 \section{Literatuur onderzoek}
+\label{sec:litonderzoek}
+
 De besproken bestaande systemen besproken in de vorige sectie geven een beeld dat er onderzoek is gedaan en er systemen zijn ontwikkeld binnen het onderwerp. Deze systemen zijn nog niet directe oplossingen voor dit project. In deze sectie wordt er andere relevante literatuur besproken.
 
+Binnen het NEMBES project\cite{NEMBES} zijn een aantal publicaties gedaan die relevant zijn. Artikel 'Building Fire Emergency Detection and Response Using Wireless Sensor Networks'\cite{ZengFire} beschrijft een real-time en robuust routing techniek voor noodsituatie netwerken in gebouwen (verder gespecificeerd in \cite{ZengRTRR}) en een hybride MAC protocol voor noodsituatie netwerken (verder gespecificeerd in \cite{ZengERMAC}). Deze beide technieken zijn ontworpen om tijdens een noodsituatie de doorvoersnelheid van data zo hoog mogelijk te houden. De genoemde technieken zijn wel ontworpen om data te verzenden naar een centraal punt ofwel 'sink' voor analyse en is in dit project niet direct van toepassing. De techniek kan waarschijnlijk wel worden veranderd om deze werkend te maken voor een decentraal systeem.
 
-
-Het artikel 'Emergency Evacuation using Wireless Sensor Networks'\cite{BarnesEmEv} beschrijft een ontwerp om een gedistribueerd WSN te gebruiken bij evacuatie. Het artikel beschrijft een algoritme die een route berekend naar bepaalde uitgangspunten binnen een netwerk, rekening houdend met het vermijden van de positie van de positie van het gevaar. Deze algoritme gebruikt gebruikt geen centraal systeem die het algoritme uitvoert, maar het algoritme wordt per module binnen het netwerk uitgevoerd. 
+Het artikel 'Emergency Evacuation using Wireless Sensor Networks'\cite{BarnesEmEv} beschrijft een ontwerp om een gedistribueerd WSN te gebruiken bij evacuatie. Het artikel beschrijft een algoritme die een route berekend naar bepaalde uitgangspunten binnen een netwerk, rekening houdend met het vermijden van de positie van de positie van het gevaar. Deze algoritme gebruikt gebruikt geen centraal systeem die het algoritme uitvoert, maar het algoritme wordt per module binnen het netwerk uitgevoerd, dus decentraal geregeld. Deze algoritmes zijn uitgevoerd op een CY8C29666 System-on-Chip microcontroller met een CC2420 2.4GHZ radio transceiver. 
 
 \section{Conclusie}
+Aan de hand van de onderzochte literatuur zal in dit stuk de onderzoeksvraag worden beantwoord. De deelvragen worden eerst beantwoord om de hoofdvraag te beantwoorden.
 
+\begin{itemize}
+\item Zijn huidige technieken om WSN's op te zetten robuust genoeg om als veiligheidssysteem te dienen?
+\end{itemize}
+
+Het project NEMBES is na analyse van zijn ingediende papers voornamelijk bezig geweest met dit vraagstuk. Resultaten van NEMBES zijn namelijk nieuwe technieken die beter werken dan conventionele technieken tijdens een noodsituatie. Deze nieuwe technieken verslechten karakteristieke eigenschappen van WSN's niet. De Emergency Response Medium Access Control (ER-MAC) en Real-Time Robust Routing (RTRR) technieken zijn 2 technieken die WSN's robuust maken voor veiligheidssystemen. De technieken zorgen er ook voor dat de doorvoersnelheid van data hoger ligt wanneer de noodsituatie beter is voor een zo optimaal mogelijk navigatiesysteem.
+
+\begin{itemize}
+\item Is de hardware voor WSN's geschikt om routes te berekenen voor evacuatie?
+\end{itemize}
+
+Geschikte hardware hangt af van meerdere zaken. zaken zoals rekenkracht (geheugengrootte (RAM en ROM), processorsnelheid) en bereik en snelheid van het draadloos signaal gelden voor elk soort WSN. De navigatie algoritme beschreven in \cite{BarnesEmEv} is getest op een platform en bewezen dat het werkt met een beperkte rekenkracht. 
+
+Voor in een noodsituatie moet er aan meer zaken gedacht worden. Noodsituaties waar brand in voorkomt zal zeer veel invloed hebben bij het opgezette WSN. Water, vuur, stof/rook en hoge temperaturen kunnen een factor zijn bij bij uitval van nodes binnen een WSN. Er moet dan een verpakkingsoplossing komen om nodes bestand te maken tegen deze omgevingskrachten. Het kan zijn dat uitval van een node binnen een WSN geen zware tegenslag is, aangezien dat betekent dat de omgevingswaarden te hoog waren om verder te opereren, dit kan gekoppeld worden aan een niveau van gevaar ten opzichte van de fysieke robuustheid van een node. 
+\\\\
+\textbf{Is een (decentraal) Wireless Sensor Network (WSN) geschikt voor het tonen van vluchtroutes aan personen in een noodsituatie?}
+
+Een systeem wat mensen moet begeleiden in noodsituaties moet betrouwbaar zijn en goede resultaten geven, het gaat immers om mensenlevens. Het gebruik van een decentraal systeem kan een oplossing bieden voor de barre omstandigheden die hardware kapot kan maken, er is namelijk geen single point of failure. Nodes binnen deze decentrale WSN kunnen hun eigen navigatie berekenen voor snelle en
+
+Conventionele technieken en protocollen die beschikbaar zijn voor WSN's zijn voldoende voor een noodsysteem. Dit kan wel verbeterd worden door gebruik te maken van ER-MAC en RTRR. Wat het systeem robuust kan maken voor grote veranderingen binnen het netwerk (uitvallen de nodes) en een hogere throughput geven.
+
+Een elektrisch systeem gebruiken voor evacuatie navigatie is beter dan gebruik van conventionele 'statische' borden. Borden houden geen rekening met waar de brand zich bevind. Deze 'statische' routes zijn wel optimaal gegeven, maar kunnen alsnog een persoon naar het gevaar toe navigeren. Een WSN kan hierop dynamisch handelen.
 
 \end{document}
