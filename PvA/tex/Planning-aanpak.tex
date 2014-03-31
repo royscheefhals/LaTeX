@@ -1,3 +1,123 @@
 \begin{document}
+In vorige hoofdstukken is de opdracht in detail beschreven. Wat hierop volgt is het maken van een plan hoe het project wordt uitgevoerd. In dit hoofdstuk wordt als eerste beschreven hoe het project wordt uitgevoerd en welke tools worden gebruikt. Hierna wordt er een planning beschreven die een beeld geeft van de te maken onderdelen. Als laatste wordt er nog een risicoanalyse opgesteld.
+
+\section{Aanpak}
+
+\subsection{Versiebeheer}
+Voor versiebeheer zal in dit project gebruik worden gemaakt van Git. Git is een gratis gedistribueerde versiebeheersysteem die meerdere verschillende workflows mogelijk maakt. Ook het branching en merging model van git uniek ten opzichte van andere versiebeheersystemen.\footnote{http://git-scm.com}
+
+\subsection{Modellering}
+In dit project zal UML worden gebruikt als modelleringsmethodiek. Diagrammen zullen worden gemaakt om het ontwerp van de applicatie weer te geven.
+
+\subsection{Communicatie}
+In dit project zal er alleen communicatie zijn met de bedrijfsbegeleider en docentbegeleider. In de eerste fases van het project zal er wekelijks contact zijn met de bedrijfsbegeleider. De voortgang van de afgelopen week zal worden besproken en wat er de volgende week zal worden gedaan/opgeleverd. De docentbegeleider zal voornamelijk helpen met het maken van het product.
+
+Communicatie met de docentbegeleider zal vooral gaan over het plan van aanpak en de scriptie. De docentbegeleider zal eenmalig op bezoek komen bij het bedrijf voor een kennismaking en om te praten over de te maken opdracht aan de hand van het plan van aanpak. Verdere contact is mogelijk, maar niet noodzakelijk.
+
+\subsection{Literatuur}
+Literatuur voor dit onderwerp zal voornamelijk bestaan uit artikelen die onderzoekers hebben gepubliceerd over dit onderwerp. Ook zullen er andere systemen geanalyseerd worden en rekening mee worden gehouden bij ontwerpen.
+
+\section{Planning}
+De planning zal bestaan uit een beschrijving van de fases die in dit project worden uitgevoerd. Deze fases worden daarna afgebeeld in een gantt chart die de verschillende taken binnen de fases en de tijdsduur daarvan tonen.
+
+\subsection{Fases}
+In deze sectie worden de fases beschreven die in dit project voorkomen. De fases zullen informatie als verwachtte start- en einddatum, werkzaamheden en resultaten bevatten. In elke fase zal tijd worden vrijgemaakt om de scriptie met nieuwe onderdelen aan te vullen aan de hand van wat er gedaan is in die periode.
+
+\begin{itemize}
+\item Project planning: 03-03-2014 - 07-04-2014
+\end{itemize}
+In deze fase wordt het project geïnitieerd. Het project wordt gespecificeerd, methodieken opgesteld en planningen worden gemaakt. Het resultaat hieruit is het plan van aanpak.
+
+\begin{itemize}
+\item Onderzoek 17-03-2014 - 21-05-2014
+\end{itemize}
+In dit project wordt onderzoek gedaan naar verschillende onderwerpen. De hoofdzaak van de onderzoeksfase is om de hoofdvraag van dit project te kunnen beantwoorden. Hiernaast moet ook onderzoek worden gedaan om bepaalde keuzes verantwoord te kunnen maken, denkende aan hardware keuze/platform keuze. De laatste is van invloed op het opwerp (de volgende fase). De ontwerpfase wordt uitgespreid over meerdere fases om als ondersteuning te bieden bij het uitvoeren van het plan van aanpak en het ontwerp. Resultaat hiervan zijn antwoorden op onderzoeksvragen die worden beschreven in de scriptie.
+
+\begin{itemize}
+\item Ontwerp 07-04-2014 - 05-05-2014
+\end{itemize}
+Na het maken van het plan van aanpak worden er ontwerpen gemaakt voor de te maken applicatie. Deze fase heeft de volgende taken:
+
+\begin{itemize}
+\item[-] UML Diagrammen: Diagrammen worden ontworpen om de verloop van de applicatie te beschrijven. Er zullen UML flow diagrammen en klassendiagrammen worden gemaakt. Deze ontwerpen kunnen in de loop van de implementatie worden gewijzigd.
+\item[-] Node Netwerk Ontwerp: Het ontwerp hoe het WSN eruit gaat zien.
+\item[-] Keuze van hardware en platform: In het demonstratie model wordt er gebruik gemaakt van hardware. Hiervoor moet een keuze gemaakt worden. Voor het ontwikkelen van de applicatie kan zijn dat er een embedded Operating System nodig is om de implementatie te versimpelen.
+\end{itemize}
+
+Deze ontwerpen zullen in de scriptie terugkomen. Ook wordt er in deze fase een opzet gemaakt van de scriptie.
+
+\begin{itemize}
+\item Implementatie 05-05-2014 - 30-06-2014
+\end{itemize}
+In deze fase wordt het product gerealiseerd aan de hand van de ontwerpen. Waar nodig kan van het ontwerp worden afgeweken zolang het ontwerp dan ook aangepast wordt hierop. Het resultaat is een werkende implementatie van de ontworpen applicatie. De applicatie kan in eerste opzicht opgedeeld worden in 3 onderdelen 
+\begin{itemize}
+\item[-] Node Netwerk: Het implementeren van het ontworpen node netwerk. Dit impliceert ervoor zorgen dat het netwerk robuust is. Ook hoort hierbij het implementeren van de logica van de locatie voor elke node.
+\item[-] Gevaardetectie: Het implementeren hoe een gevaar wordt gedetecteerd.
+\item[-] Navigatie: Het berekenen van de route naar de uitgang wanneer er een gevaar is gedetecteerd.
+\end{itemize}
+
+\noindent Deze implementatie zal worden gedocumenteerd in de scriptie.
+
+\begin{itemize}
+\item Afronding 23-06-2014 08-07-2014
+\end{itemize}
+Deze laatste fase is bedoeld om genoeg tijd over te hebben om de scriptie af te ronden. Aan het einde van deze datum moet de scriptie ingeleverd zijn. Deze fase is bedoeld om tijdsnood te voorkomen.
+
+\subsection{Gantt Chart}
+
+\hspace{-1.5cm}
+\begin{ganttchart}[
+newline shortcut,
+y unit title=0.8cm,
+y unit chart=0.6cm,
+bar label node/.append style=%
+{align=right},
+vgrid, 
+x unit=.7cm,
+bar height=.6,
+bar label font=\normalsize\color{black!50},
+group right shift=0,
+group top shift=.6,
+group height=.3,
+group peaks height=.2,
+]{10}{28}
+\gantttitle{Weeknummer}{19} \\
+\gantttitlelist{10,...,28}{1} \\
+\ganttbar{Plan van Aanpak}{10}{14} \\
+\ganttgroup{Ontwerp applicatie} {15}{19} \\
+\ganttbar{UML Diagrammen} {15}{16} \\
+\ganttbar{Node Netwerk Ontwerp}{18}{19} \\
+\ganttbar{Keuze Hardware/\\Platform}{17}{18} \\
+\ganttgroup{Implementatie} {20}{25} \\
+\ganttbar{Node Netwerk}{20}{21} \\
+\ganttbar{Gevaardetectie}{22}{22} \\
+\ganttbar{Navigatie} {23}{25} \\
+\ganttgroup{Scriptie}{12}{28} \\
+\ganttbar{Literatuur onderzoek}{12}{16} \\
+\ganttbar{Document opzet} {16}{16}\\
+\ganttlink[link type=f-s]{elem0}{elem1} \\
+\ganttlink[link type=f-s]{elem1}{elem5} \\
+\ganttlink[ link type=dr]{elem6}{elem8}\\
+\ganttlink{elem7}{elem8}\\
+\end{ganttchart}
+
+\section{Risico's}
+
+Een project die een nieuwe richting in gaat met een nieuw idee neemt ook zijn risico's met zich mee. Om proactief te kunnen handelen op deze mogelijke problemen zijn hieronder bedachte risico's met daarbij beperkende maatregel opgesteld.
+
+\begin{center}
+\begin{tabular}{| p{5cm}| p{9cm}|}
+\hline
+{\bf Risico} & {\bf Beperkende Maatregel}\\
+\hline
+
+Verkeerde keuze hardware / platform / protocol & Goede keuzes maken door middel van referentie materiaal, bestaande systemen vergelijken en de mogelijkheden per techniek tegenover de requirements zetten. Wanneer dit toch voorkomt, een afweging maken tussen het accepteren van de tekortkoming of het kiezen van een andere oplossing.\\
+\hline
+Niet genoeg kennis om probleemstuk te overbruggen & Binnen Alten PTS zijn er veel professionals ie bekend zijn met embedded apparaten. De cultuur binnen Alten is dat hulp tussen werknemers wordt gewaardeerd. Ook zijn er publieke mailinglijsten beschikbaar om vragen op te stellen.\\
+\hline
+
+
+\end{tabular}
+\end{center}
 
 \end{document}

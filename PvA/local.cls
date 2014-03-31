@@ -11,6 +11,7 @@
 \usepackage{array}
 \usepackage{tocloft}
 \usepackage{pdfpages}
+\usepackage{pgfgantt}
 %\usepackage{natbib}
 \usepackage[utf8]{inputenc}
 
