@@ -1,9 +1,11 @@
-
-
 \documentclass{../local}
 
 \begin{document}
-In voorgaande hoofdstuk is de herkomst en de definitie van de opdracht beschreven. In dit hoofdstuk wordt voor de opdracht de doelstellingen, requirements, onderzoeksvragen, en verwachtte eindproducten beschreven. Deze zullen respectievelijk geïmplementeerd, beantwoord en toonbaar in de scriptie worden beschreven. 
+In voorgaande hoofdstuk is de herkomst van de  opdracht beschreven. In dit hoofdstuk wordt de opdracht gedefinieerd en beschreven.  Deze zullen respectievelijk geïmplementeerd, beantwoord en toonbaar in de scriptie worden beschreven. 
+
+\section{Opdracht}
+Uit het oogpunt van het project 'Veiligheid op de werkvloer', de interesses van de student en als meerwaarde voor Alten PTS, is de volgende opdracht geformuleerd: \\
+\textbf{Het maken van een gedistribueerde Wireless Sensor Netwerk (WSN) die helpt bij het navigeren van personen bij een noodsituatie, zoals een branduitbraak of ontsnapping van een gevaarlijk gas.}
 
 \section{Doelstellingen}
 Het doel van dit project is om een demonstrator te hebben voor Alten PTS die getoond kan worden aan potentiële klanten die geïnteresseerd zijn in oplossingen voor 'veiligheid op de werkvloer'. In het geval van dit project is de demonstrator een WSN die een navigatie toont bij een noodsituatie. De navigatie en noodsituatie detectie mag een simpele werking hebben (gebruik van LED's of drukknoppen). Deze demonstrator moet werkend zijn op fysieke hardware. 
@@ -11,6 +13,17 @@ Het doel van dit project is om een demonstrator te hebben voor Alten PTS die get
 Hoewel dit project een onderdeel is van het project 'veiligheid op de werkvloer', is het goed om een doelstelling te definiëren voor het product zelf. De doelstelling van dit product is om bij een noodsituatie, waarbij een gebouw moet worden ontruimd, de personen binnen een gebouw op intuïtieve wijze een route te geven naar de dichtstbijzijnde nooduitgang.
 
 Als uitbreiding op deze doelstelling kan het WSN na een evacuatie aanwezige reddingswerkers te dienen door actief sensor informatie door te sturen naar mobiele ontvangers. Hierdoor is het mogelijk dat de reddingswerker een verwachting heeft over de komende situatie, of een ideale route kan geven naar een bepaalde locatie. Ook kan de reddingswerker tegelijkertijd gevolgd worden vanaf een basisstation \cite{ShaWSN}.
+
+\section{Scope}
+In voorgaande sectie is de opdracht gedefinieerd. In deze sectie wordt deze opdracht afgebakend. Er worden aannames gemaakt en aangegeven aan welk onderdeel wordt gewerkt en aan welk onderdeel niet wordt gewerkt.
+
+Dit project zal zich focussen op het maken van een functionele demonstrator. Dit impliceert dat er software gemaakt moet worden op fysieke hardware om te kunnen worden getoond. In dit project wordt de focus op het maken van deze software gelegd. Problemen of aandachtspunten voor hardware wordt zo min mogelijk naar gekeken om het project haalbaar te maken. Hieronder volgen afbakeningen die in dit project worden gehandhaafd.
+
+\begin{itemize}
+\item Wireless sensor nodes zijn zo ontworpen dat deze op elke locatie kan worden geplaatst. Ook op locaties waar niet een vaste stroomvoorziening is. De Wireless sensor nodes moeten dan op batterij draaien. Bij het gebruik van wireless sensor nodes moet dan ook altijd het stroomverbruik in acht genomen worden. In dit project wordt hier geen rekening mee gehouden. Er wordt aangenomen dat er altijd stroomvoorziening is. Ook hoeven er geen optimalisaties worden gedaan om het stroomverbruik zo min mogelijk te houden.
+\item Bij WSN's wordt er uiteraard met draadloze verbindingen gewerkt. Draadloze netwerken hebben redelijk complexe technieken onder de motorkap om het zo goed mogelijk werkend te hebben. Tegenwoordig zijn er genoeg platformen beschikbaar die een startende ontwikkelaar met gebruik van WSN's een snelle start geven. Voorbeelden van deze platformen zijn: Zigbee\footnote{\url{www.zigbee.org/}}, Tiny OS\footnote{\url{www.tinyos.net/}} en Contiki OS\footnote{\url{www.contiki-os.org/}}. Deze platformen geven ondersteuning voor het opzetten van draadloze netwerken en er zijn veel voorbeelden beschikbaar. Ook geven deze platformen functionaliteit om makkelijker op embedded apparaten te werken. Dit project zal een van deze platformen gebruiken. 
+\item Om de demonstratie zijn kracht goed toonbaar te maken, moeten er meerdere nodes binnen het WSN gebruikt worden. Initieel wordt gedacht om 5 nodes te gebruiken voor het demonstratie model.
+\end{itemize}
 
 \section{Requirements}
 Om de doelstelling te behalen zijn er requirements opgesteld. Deze zijn opgesteld volgens de MoSCoW methode. 
@@ -72,12 +85,5 @@ Aan het einde van het project worden er 2 soorten producten opgeleverd.
 De opdracht vereist dat er een demonstrator wordt opgeleverd. Deze demonstrator moet een werkende applicatie, die beschreven staat in de opdracht en gespecificeerd is door de requirements, kunnen draaien (verder in het document zal 'de applicatie' hiernaar verwijzen). Om de werking te van de gemaakte applicatie te kunnen tonen zal de demonstratie uit ongeveer 5 nodes bestaan. Van de te maken applicatie worden van tevoren ontwerpen gemaakt in de vorm van UML diagrammen.
 
 Naast het te maken demonstrator wordt er ook documentatie opgeleverd. Dit zal in de vorm zijn van een afstudeerverslag (scriptie). Deze scriptie zal het verloop en resultaten van het project beschrijven en de vraagstukken beantwoorden.
-
-\section{Aannames}
-Aangezien het product uiteindelijk een demonstratie model wordt, kunnen een aantal aannames gedaan worden om de ontwikkeling te versimpelen. Door de versimpeling kan er meer worden gefocust op het maken van functionaliteiten van de demonstrator.
-
-\begin{itemize}
-\item Wireless sensor nodes zijn zo ontworpen dat deze op elke locatie kan worden geplaatst. Ook op locaties waar niet een vaste stroomvoorziening is. De Wireless sensor nodes moeten dan op batterij draaien. Bij het gebruik van wireless sensor nodes moet dan ook altijd het stroomverbruik in acht genomen worden. In dit project wordt hier geen rekening mee gehouden. Er wordt aangenomen dat er altijd stroomvoorziening is. Ook hoeven er geen optimalisaties worden gedaan om het stroomverbruik zo min mogelijk te houden.
-\end{itemize}
 
 \end{document}

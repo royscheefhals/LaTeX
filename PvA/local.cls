@@ -12,7 +12,7 @@
 \usepackage{tocloft}
 \usepackage{pdfpages}
 \usepackage{pgfgantt}
-%\usepackage{natbib}
+\usepackage{natbib}
 \usepackage[utf8]{inputenc}
 
 \titleformat{\chapter}
