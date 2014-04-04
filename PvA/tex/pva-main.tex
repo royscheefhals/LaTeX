@@ -13,13 +13,14 @@
 
 \includegraphics[width=0.6\textwidth]{mica2}~\\[1cm]
 
-{ \huge \bfseries Actieve Evacuatie met gebruik van Wireless Sensor Networks \\[0.4cm] }
+{ \huge \bfseries Actieve Evacuatie navigatie door middel van Wireless Sensor Networks \\[0.4cm] }
 \hrule
-\hspace{0pt} \\[1.3cm]
+\hspace{0pt} 
+\vspace{\fill}
 
 \begin{minipage}{0.4\textwidth}
 \begin{flushleft} \large
-\emph{Author:}\\
+\emph{Afstudeerder:}\\
 Roy \textsc{Scheefhals}\\
 \emph{Hogeschool Utrecht}\\
 Studentnummer: 1563303\\
@@ -34,29 +35,32 @@ Martin \textsc{Klomp}\\
 \end{minipage}
 
 \end{center}
+\today
 \end{titlepage}
 
-\thispagestyle{empty}
 \renewcommand{\thesection}{\Roman{section}}
 
-\section*{Versiebeheer}
-\begin{tabular}{ | l | l | l | p{7.5cm} |}
-\hline
-Versie & Wanneer & Wat \\ \hline
-0.1 & 05-03-2014 & Eerste opzet document\\ \hline
-0.2 & 07-03-2014 & Achtergrond Project v1\\ \hline
-1.0 & 31-03-2014 & Eerste versie\\ \hline
 
-\end{tabular}
+%\section*{Versiebeheer}
+%\begin{tabular}{ | l | l | l | p{7.5cm} |}
+%\hline
+%Versie & Wanneer & Wat \\ \hline
+%0.1 & 05-03-2014 & Eerste opzet document\\ \hline
+%0.2 & 07-03-2014 & Achtergrond Project v1\\ \hline
+%1.0 & 31-03-2014 & Eerste versie\\ \hline
+%
+%\end{tabular}
 
-\clearpage\pagenumbering{roman}
+\newpage\pagenumbering{roman}
 
-\chapter{Inleiding}
+\section{Termen en Afkortingen}
+\subfile{Termen}
+
+\section{Inleiding}
 \subfile{Inleiding}
 
 \newpage\pagenumbering{arabic}
 \renewcommand{\thesection}{\arabic{section}}
-\renewcommand*\contentsname{Inhoud}
 \setlength{\cftbeforetoctitleskip}{-3em}
 \tableofcontents
 
@@ -71,7 +75,7 @@ Versie & Wanneer & Wat \\ \hline
 \chapter{Planning en Aanpak}
 \subfile{Planning-aanpak}
 
-\bibliographystyle{plain}
+\bibliographystyle{apalike2}
 \bibliography{mybib}
 
 \subfile{Bijlagen}

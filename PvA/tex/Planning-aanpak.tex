@@ -1,5 +1,6 @@
+\documentclass{../local}
 \begin{document}
-In vorige hoofdstukken is de opdracht in detail beschreven. Wat hierop volgt is het maken van een plan hoe het project wordt uitgevoerd. In dit hoofdstuk wordt als eerste beschreven hoe het project wordt uitgevoerd door te bepalen welke tools en methodes worden gebruikt. Hierna wordt er een planning beschreven die een beeld geeft van de te maken onderdelen volgens de watervalmethode. Als laatste wordt er een risicoanalyse opgesteld.
+In vorige hoofdstukken is de aard en definitie van de opdracht in detail beschreven. Wat hierop volgt is het maken van een plan hoe het project wordt uitgevoerd. In dit hoofdstuk is als eerste beschreven hoe het project wordt uitgevoerd door te bepalen welke tools en methodes worden gebruikt. Hierna is er een planning beschreven die een beeld geeft van de te maken onderdelen volgens de watervalmethode. Als laatste is een risicoanalyse opgesteld.
 
 \section{Aanpak}
 
@@ -10,31 +11,31 @@ Voor versiebeheer zal in dit project gebruik worden gemaakt van Git. Git is een 
 In dit project zal UML worden gebruikt als modelleringsmethodiek. Diagrammen zullen worden gemaakt om het ontwerp van de applicatie weer te geven.
 
 \subsection{Ontwikkelomgeving}
-Er zal op Linux Mint worden ontwikkeld. Compilers voor microprocessoren zijn meestal initieel ontwikkeld voor linux, maar te gebruiken op windows middels Cygwin. Om deze extra stap te vermeiden wordt er direct met Linux gewerkt. Vele voorbeelden over WSN implementaties van de verschillende platformen gebruiken ook Linux als voorbeeldsysteem.
+Er zal op Linux Mint worden ontwikkeld. Compilers voor microprocessoren zijn meestal initieel ontwikkeld voor linux, maar te gebruiken op windows middels Cygwin. Om deze extra stap te vermijden wordt direct met Linux gewerkt. Bij vele voorbeelden over WSN implementaties van de verschillende platformen gebruiken ook Linux als voorbeeldsysteem.
 
 \subsection{Platform}
-De keuze van een platform wordt tijdens de ontwerpfase bepaald. Er zal een gewogen keuze gemaakt worden tussen de platformen: Zigbee, Contiki OS, Tiny OS en RIOT OS. Deze platformen zijn vooruitstrevende platformen bedoeld voor WSN's.
+De keuze van een platform wordt tijdens de ontwerpfase bepaald. Er zal een gewogen keuze gemaakt worden tussen de platformen: Zigbee, Contiki OS, Tiny OS en RIOT OS. Deze platformen zijn vooruitstrevende platformen ontworpen om als WSN te functioneren.
 
 \subsection{Programmeertaal}
 Het product zal hoogstwaarschijnlijk in de programmeertaal C worden geschreven. De meeste platformen voor WSN's zijn namelijk geprogrammeerd in C en vereisen dan ook dat de applicatie in C wordt ontwikkeld. TinyOS is een uitzondering hierop en gebruikt 'nesC'. Dit is een uitgebreide programmeertaal op C die ontworpen is voor het 'event-driven Tiny Operating System'.\cite{nesC}
 
 \subsection{Draadloze Standaard}
-Voor WSN's is de draadloze standaard IEEE 802.15.4 van toepassing. Deze standaard heeft als eigenschappen dat het een hoog niveau van simpliciteit heeft. Dit maakt de standaard ideaal voor goedkope energiezuinige oplossingen. De snelheid van de standaard is laag, maar meer dan genoeg voor een WSN waarvan de nodes weinig data hoeven te sturen.
+Voor WSN's is de draadloze standaard IEEE 802.15.4 van toepassing. Deze standaard heeft als eigenschappen dat het een hoog niveau van simpliciteit heeft. Dit maakt de standaard ideaal voor goedkope energiezuinige oplossingen. De snelheid van de standaard is laag, maar meer dan genoeg voor een WSN waarvan de nodes weinig data hoeven te sturen. Nodes hoeven in veel gevallen alleen maar sensor data door te sturen, wat meestal niet veel data is.
 
 \subsection{Begeleiding}
-In dit project zal er voornamelijk contact zijn met de bedrijfsbegeleider en docentbegeleider. In de eerste fases van het project zal er wekelijks contact zijn met de bedrijfsbegeleider. De voortgang van de afgelopen week zal worden besproken en wat er de volgende week zal worden gedaan/opgeleverd. De docentbegeleider zal voornamelijk helpen met het maken van het product.
+In dit project zal voornamelijk contact zijn met de bedrijfsbegeleider en docentbegeleider. In de eerste fases van het project zal wekelijks contact zijn met de bedrijfsbegeleider. De voortgang van de afgelopen week zal worden besproken en wat de opvolgende week zal worden gedaan/opgeleverd. De docentbegeleider zal voornamelijk helpen met het maken van het product.
 
 Communicatie met de docentbegeleider zal vooral gaan over het plan van aanpak en de scriptie. De docentbegeleider zal eenmalig op bezoek komen bij het bedrijf voor een kennismaking en om te praten over de te maken opdracht aan de hand van het plan van aanpak. Verdere contact is mogelijk, maar niet noodzakelijk.
 
 \subsection{Literatuur}
-Literatuur voor dit onderwerp zal voornamelijk bestaan uit artikelen die onderzoekers hebben gepubliceerd over dit onderwerp via bekende uitgevers van dit soort artikelen, zoals IEEE en ACM. Ook zal er gekeken worden naar andere systemen. Deze zullen geanalyseerd worden en rekening mee worden gehouden bij ontwerpens.
+Literatuur voor dit onderwerp zal voornamelijk bestaan uit artikelen die onderzoekers hebben gepubliceerd over dit onderwerp via bekende uitgevers, zoals IEEE en ACM. Ook zal er gekeken worden naar andere systemen. Deze zullen geanalyseerd worden en rekening mee worden gehouden bij ontwerpen.
 
 %***********PLANNING**********************************
 \section{Planning}
 Dit project zal volgens de watervalmethode met eigen geformuleerde fases ontwikkeld worden. In de eerste sectie worden de fases beschreven die in dit project voorkomen. Ook wordt hierin beschreven welke taken er voorkomen in de desbetreffende fase. In de sectie daarna wordt de planning visueel weergegeven door middel van een gantt chart.
 
 \subsection{Fases}
-In deze sectie worden de fases met daarin de taken beschreven die in dit project voorkomen. De fases zullen informatie als verwachtte duur, werkzaamheden en resultaten bevatten. Elke tijdsverwachting houdt ook rekening met de tijd die nodig is voor het toevoegen waar nodig in de scriptie. Er is 720 uur beschikbaar, zoals in sectie 1 hoofdstuk Project Definitie staat aangegeven.
+In deze sectie worden de fases met daarin de taken beschreven die in dit project voorkomen. De fases zullen informatie als verwachtte duur, werkzaamheden en resultaten bevatten. Elke tijdsverwachting houdt ook rekening met de tijd die nodig is voor het toevoegen waar nodig in de scriptie. Er is 720 uur beschikbaar, zoals in hoofdstuk Project Definitie sectie 1 staat aangegeven.
 
 \begin{itemize}
 \item Project planning - 120 uur
@@ -59,35 +60,41 @@ De volgende taken kunnen worden gesteld voor deze fase:
 Na het maken van het plan van aanpak worden er ontwerpen gemaakt voor de te maken applicatie. Ook wordt er geëxperimenteerd met de gekozen hardware. Deze fase heeft de volgende taken:
 
 \begin{itemize}
-\item[-] UML Diagrammen 70 uur: Aan de hand van de requirements worden er flow diagrammen van de applicatie ontworpen. Hiermee kunnen ook de verschillende statussen binnen de applicatie overzichtelijk worden. Dit houdt ook in dat het ontwerp beschrijft welke data wanneer en waarheen moet worden verzonden. Deze ontwerpen kunnen in de loop van de implementatie worden gewijzigd.
+\item[-] UML Diagrammen 70 uur: Aan de hand van de requirements worden er flow diagrammen van de applicatie ontworpen. Hiermee kunnen ook de verschillende statussen binnen de applicatie overzichtelijk worden. Dit houdt ook in dat het ontwerp beschrijft welke data wanneer en waarheen moet worden verzonden. Deze ontwerpen kunnen in de loop van de implementatie worden gewijzigd. Ook zullen er klassendiagrammen worden gemaakt om de architectuur zo goed mogelijk te maken.
 
 \item[-] Node Netwerk Ontwerp 30: Het ontwerp hoe het WSN eruit gaat zien. Keuze van soort netwerk heeft invloed op de robuustheid en snelheid van het systeem.
 
-\item[-] Experimenteren met Hardware - 80 uur: Om bekend te raken met de gekozen platform / hardware worden er een aantal kleine programma's gemaakt voor op de hardware. Naast het doel om de afstudeerder de mogelijkheden in te zien om de ontwerpen beter te begrijpen, is het ook een kans om te verifiëren of de keuze van hardware/platform goed is.
+\item[-] Experimenteren met Hardware - 80 uur: Om bekend te raken met de gekozen platform / hardware worden er een aantal kleine programma's gemaakt voor op de hardware. Naast het doel om de afstudeerder de mogelijkheden in te zien om de ontwerpen beter te begrijpen, is het ook een kans om te verifiëren of de keuze van hardware/platform goed is. Verwacht is dat de volgende testprogramma's worden gemaakt:
+\begin{itemize}
+\item[*] Simpele communicatie tussen 2 nodes, bv. een chat applicatie.
+\item[*] Gebruik van IO devices (knoppen, LED's).
+\item[*] Data/Bestand opslaan in flash geheugen.
+\item[*] Complexere communicatie tussen meerdere nodes door data tussen alle nodes te synchroniseren, bv. aantal keer knop ingedrukt.
+\end{itemize}
 \end{itemize}
 
 \begin{itemize}
 \item Implementatie - 250 uur
 \end{itemize}
-In deze fase wordt het product gerealiseerd aan de hand van de ontwerpen. Waar nodig kan van het ontwerp worden afgeweken zolang het ontwerp dan ook aangepast wordt hierop. Het resultaat is een werkende implementatie van de ontworpen applicatie. De applicatie kan in eerste opzicht opgedeeld worden in 3 onderdelen 
+In deze fase wordt het product gerealiseerd aan de hand van de ontwerpen. Waar nodig kan van het ontwerp worden afgeweken zolang het ontwerp dan ook aangepast wordt hierop. Het resultaat is een werkende implementatie van de ontworpen applicatie. De applicatie kan worden opgesplitst in 4 onderdelen:
 \begin{itemize}
-\item[-] Node Netwerk Initialisatie - 70 uur: Het implementeren van het ontworpen node netwerk. Dit impliceert ervoor zorgen dat het netwerk robuust is. Ook hoort hierbij het implementeren van de logica van de locatie voor elke node.
+\item[-] Node Netwerk Initialisatie - 70 uur: Het implementeren van het ontworpen node netwerk. Dit impliceert ervoor te zorgen dat het netwerk robuust is. Ook hoort hierbij het implementeren van de logica van de locatie voor elke node.
 \item[-] Gevaardetectie - 20 uur: Het implementeren hoe een gevaar wordt gedetecteerd. Dit hoeft niet veel te zijn aangezien het initieel om een detectie gaat via een knop.
 \item[-] Gevaarsituatie dataverzending - 80 uur: Het verzenden van data over de huidige situatie van ee node. 
 \item[-] Algoritme Evacuatie Route - 60: Het berekenen van de route aan de hand van de binnengekomen data van de andere nodes. 
 \end{itemize}
 
-\noindent Deze implementatie zal worden gedocumenteerd in de scriptie.
+\noindent De applicatie wordt gedocumenteerd vanuit een technisch aspect en een functioneel aspect. De gemaakte code wordt ook zo nodig voorzien van commentaar. 
 
 \begin{itemize}
 \item Afronding - 40 uur
 \end{itemize}
-Deze laatste fase is bedoeld om genoeg tijd over te hebben om de scriptie af te ronden. Aan het einde van deze datum moet de scriptie ingeleverd zijn. Deze fase is bedoeld om tijdsnood te voorkomen.
+Deze laatste fase is bedoeld om genoeg tijd over te hebben om de scriptie af te ronden. Aan het einde van deze fase moet de scriptie ingeleverd zijn. Deze fase is bedoeld om tijdsnood te voorkomen.
 
 \subsection{Gantt Chart}
-In voorgaande sectie zijn er fases met taken en tijdsduur gedefinieerd. Sommigen van de startdatums van deze fases hebben overlap met elkaar. Om dit overzichtelijk weer te geven wordt dit visueel getoond via een gantt chart. 
+In voorgaande sectie zijn er fases met taken en tijdsduur gedefinieerd. Sommigen van deze fases hebben overlap met elkaar. Op deze manier kan er wanneer een fase vastloopt, met de andere verder kan worden gewerkt. Ook geeft het aan dat beide fases invloed op elkaar hebben, bv. onderzoek die invloed heeft op platform keuze, wat invloed heeft op het ontwerp. Om het verloop overzichtelijk weer te geven wordt dit visueel getoond in een gantt chart.
 
-\hspace{-1.5cm}
+\hspace{-2cm}
 \begin{ganttchart}[
 newline shortcut,
 y unit title=0.8cm,
@@ -106,16 +113,18 @@ group peaks height=.2,
 \gantttitle{Weeknummer}{19} \\
 \gantttitlelist{10,...,28}{1} \\
 \ganttbar{Plan van Aanpak}{10}{14} \\
-\ganttgroup{Ontwerp applicatie} {15}{19} \\
-\ganttbar{UML Diagrammen} {15}{16} \\
-\ganttbar{Node Netwerk Ontwerp}{18}{19} \\
-\ganttbar{Keuze Hardware/\\Platform}{17}{18} \\
-\ganttgroup{Implementatie} {20}{25} \\
-\ganttbar{Node Netwerk}{20}{21} \\
-\ganttbar{Gevaardetectie}{22}{22} \\
-\ganttbar{Navigatie} {23}{25} \\
+\ganttgroup{Ontwerp applicatie} {15}{20} \\
+\ganttbar{Experimenteren Hardware}{15}{19} \\
+\ganttbar{UML Diagrammen} {16}{19} \\
+\ganttbar{Node Netwerk Ontwerp}{18}{20} \\
+\ganttgroup{Implementatie} {21}{27} \\
+\ganttbar{Node Netwerk Init.}{21}{23} \\
+
+\ganttbar{Gevaardetectie}{23}{23} \\
+\ganttbar{Gevaarsituatie dataverz.} {24}{26} \\
+\ganttbar{Algoritme Evac. route}{26}{27}\\
 \ganttgroup{Onderzoek}{14}{19} \\
-\ganttbar{Keuze Platform/\\hardware} {14}{15}\\
+\ganttbar{Keuze Platform/Hardware} {14}{15}\\
 \ganttbar{Onderzoek Hoofdvraag}{15}{19} \\
 \ganttlink[link type=f-s]{elem0}{elem1} \\
 \ganttlink[link type=f-s]{elem1}{elem5} \\
@@ -123,6 +132,7 @@ group peaks height=.2,
 \ganttlink{elem7}{elem8}\\
 \end{ganttchart}
 
+\newpage
 \section{Risico's}
 
 Een project die een nieuwe richting in gaat met een nieuw idee neemt ook zijn risico's met zich mee. Om proactief te kunnen handelen op deze mogelijke problemen zijn hieronder bedachte risico's met daarbij beperkende maatregel opgesteld.
@@ -133,13 +143,18 @@ Een project die een nieuwe richting in gaat met een nieuw idee neemt ook zijn ri
 {\bf Risico} & {\bf Beperkende Maatregel}\\
 \hline
 
-Verkeerde keuze hardware / platform / protocol & Goede keuzes maken door middel van referentie materiaal, bestaande systemen vergelijken en de mogelijkheden per techniek tegenover de requirements zetten. Wanneer dit toch voorkomt, een afweging maken tussen het accepteren van de tekortkoming of het kiezen van een andere oplossing.\\
+Verkeerde keuze hardware / platform / protocol & Goede keuzes maken door middel van referentie materiaal, bestaande systemen vergelijken en de mogelijkheden per techniek tegenover de requirements zetten kan dit risico minimaliseren. Wanneer dit toch voorkomt, een afweging maken tussen het accepteren van de tekortkoming of het kiezen van een andere oplossing.\\
 \hline
-Niet genoeg kennis om probleemstuk te overbruggen & Binnen Alten PTS zijn er veel professionals die bekend zijn met embedded apparaten. De cultuur binnen Alten is dat hulp tussen werknemers wordt gewaardeerd. Ook zijn er publieke mailinglijsten beschikbaar om vragen op te stellen.\\
+Niet genoeg kennis om probleemstuk te overbruggen & Binnen Alten PTS zijn er veel professionals die bekend zijn met embedded apparaten. De cultuur binnen Alten is dat hulp tussen werknemers wordt gewaardeerd. Ook zijn er publieke mailinglijsten beschikbaar om vragen op te stellen. Door zo effectief mogelijk onderzoek te doen alvorens de implementatie te beginnen kan dit voorkomen.\\
 \hline
-%falende hardware
-%onduidelijke requirements
-%niet haalbare planning
+Falende hardware & Om hierop voorbereid te zijn, zijn er meerdere oplossingen beschikbaar. Het hebben van meer dan een exemplaar kan de impact verlagen. Ook is het mogelijk om simulaties te gebruiken om mee te ontwikkelen. Cooja is een voorbeeld die WSN's kan simuleren.\\
+\hline
+Onduidelijke Requirements & Door regelmatig de voortgang te bespreken kunnen onduidelijke requirements eerder boven water komen en kunnen ze eerder worden opgelost.\\
+\hline
+Onduidelijke Onderzoeksvraag & Door uitgevoerde onderzoek te reflecteren op gewenste doelstellingen en requirements kan vroegtijdig onduidelijke onderzoeksvragen worden gedetecteerd en op worden gereageerd.\\
+\hline
+Onhaalbare Planning & Door de voortgang van het project te vergelijken tegenover de gemaakte planning kan vroeg worden gezien of de planning te strak is opgesteld. Dan kan ervoor gekozen worden om functionaliteit te laten vallen, of sommigen taken te veranderen.\\
+\hline
 
 \end{tabular}
 \end{center}
