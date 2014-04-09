@@ -26,7 +26,7 @@ In voorgaande sectie is de opdracht gedefinieerd. In deze sectie wordt deze opdr
 Dit project zal zich focussen op het maken van een demonstrator. Dit impliceert dat er software gemaakt wordt wat draait op fysieke hardware om te kunnen worden getoond. In dit project wordt de focus op het maken van deze software gelegd. Problemen of aandachtspunten voor hardware wordt zo min mogelijk naar gekeken om het project haalbaar te maken.
 
 \begin{itemize}
-\item Nodes zijn zo ontworpen dat deze op elke locatie kan worden geplaatst. Ook op locaties waar niet een vaste stroomvoorziening is. De nodes moeten dan op batterij draaien. Bij het ervan moet dan ook altijd het stroomverbruik in acht genomen worden. In dit project wordt hier geen rekening mee gehouden. Er wordt aangenomen dat er altijd stroomvoorziening is. Ook hoeven er geen optimalisaties worden gedaan om het stroomverbruik zo min mogelijk te houden.
+\item Nodes zijn zo ontworpen dat deze op elke locatie kan worden geplaatst. Ook op locaties waar niet een vaste stroomvoorziening is. De nodes moeten dan op batterij draaien. Bij het ontwikkelen van applicaties hiervoor, moet dan altijd het stroomverbruik in acht genomen worden. In dit project wordt hier geen rekening mee gehouden. Er wordt aangenomen dat er altijd stroomvoorziening is. Ook hoeven er geen optimalisaties worden gedaan om het stroomverbruik zo min mogelijk te houden.
 
 \item Bij WSN's wordt er uiteraard met draadloze verbindingen gewerkt. Draadloze netwerken hebben 
 redelijk complexe technieken onder de motorkap om het zo optimaal mogelijk werkend te hebben. Tegenwoordig zijn er genoeg platformen beschikbaar die een startende ontwikkelaar met gebruik van WSN's een snelle start geven. Voorbeelden van deze platformen zijn: Zigbee\footnote{\url{www.zigbee.org/}}, Tiny OS\footnote{\url{www.tinyos.net/}}, Contiki OS\footnote{\url{www.contiki-os.org/}} en RIOT OS \footnote{\url{www.riot-os.org/}}. Deze platformen geven ondersteuning voor het opzetten van draadloze netwerken en er zijn veel voorbeelden beschikbaar. Ook geven deze platformen functionaliteit om makkelijker met embedded apparaten te werken. Dit project zal een van deze platformen gebruiken. 
@@ -95,8 +95,8 @@ In voorgaande secties is de opdracht gedefinieerd en afgebakend. In deze sectie 
 Een applicatie die als een veiligheidssysteem moet dienen ( in dit geval navigatie naar de nooduitgang ), moet voldoen aan een breed scala aan veiligheidseisen, denkende aan reactietijd en robuustheid. In dit project wordt hier beperkt op gelet. Vanwege het feit dat de applicatie vanaf niks op moet worden gebouwd en beperkte tijd, is het niet haalbaar om bij elk component te optimaliseren. Hierna volgt een lijst aan kwaliteitscriteria die haalbaar moeten zijn voor dit project:
 
 \begin{itemize}
-\item Wanneer er een noodsituatie is gedetecteerd moet elke node die binnen het netwerk vallen zijn route  weergeven binnen 30 seconden.
-\item berekende routes mogen niet een weg wijzen naar de plek van een gevaar. De route moet om het gevaar heen naar de veiligste nooduitgang navigeren.
+\item Wanneer er een noodsituatie is gedetecteerd moet elke node die binnen het netwerk vallen zijn route  weergeven binnen 1 minuut. Volgens \cite{BarnesEmEv}, kan een systeem van 100 punten een route berekenen binnen $\pm$ 5 seconden. Voor dit project is 1 minuut genoeg aangezien de focus niet ligt op het zo veel mogelijk optimaliseren van algoritmes en netwerksnelheden.
+\item Berekende routes mogen niet een weg wijzen naar de plek van een gevaar. De route moet om het gevaar heen naar een nooduitgang navigeren.
 \item Nadat alle nodes stroom hebben gekregen, moet het netwerk binnen 3 minuten opgezet en operationeel zijn.
 \end{itemize}
 
@@ -118,7 +118,7 @@ Deze vragen zullen in de loop van het project worden beantwoord en uiteindelijk 
 \section{Resultaten en Eindproducten}
 Aan het einde van het project worden er 2 soorten producten opgeleverd.
 
-De opdracht vereist dat er een demonstrator wordt opgeleverd. Deze demonstrator moet een werkende applicatie, die beschreven staat in de opdracht en gespecificeerd is door de requirements, kunnen draaien (verder in het document zal 'de applicatie' hiernaar verwijzen). Om de werking te van de gemaakte applicatie te kunnen tonen zal de demonstratie uit ongeveer 5 nodes bestaan. Van de te maken applicatie worden van tevoren ontwerpen gemaakt in de vorm van UML diagrammen. De gemaakte applicatie ( de broncode ) met bijbehorende documentatie zal aan het einde van het project overhandigd worden aan Alten PTS.
+De opdracht vereist dat er een demonstrator wordt opgeleverd. Deze demonstrator moet een werkende applicatie, die beschreven staat in de opdracht en gespecificeerd is door de requirements, kunnen draaien (verder in het document zal 'de applicatie' hiernaar verwijzen). Om de werking van de gemaakte applicatie te kunnen tonen, zal de demonstratie uit ongeveer 5 nodes bestaan. De applicatie zelf zal niet van dit aantal uitgaan, maar zal op een manier worden ontwikkeld dat het meerdere nodes kan ondersteunen. Van de te maken applicatie worden van tevoren ontwerpen gemaakt in de vorm van UML diagrammen. De gemaakte applicatie ( de broncode ) met bijbehorende documentatie zal aan het einde van het project overhandigd worden aan Alten PTS.
 
 Naast het te maken demonstrator wordt er ook documentatie opgeleverd. Dit zal in de vorm zijn van een afstudeerverslag (scriptie). Deze scriptie zal het verloop en resultaten van het project beschrijven en de vraagstukken beantwoorden.
 
