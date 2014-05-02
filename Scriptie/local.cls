@@ -8,7 +8,7 @@
 \usepackage{subfiles}
 \usepackage[titletoc]{appendix}
 \usepackage[a4paper]{geometry}
-\usepackage{caption}
+\usepackage[singlelinecheck=false]{caption}
 \usepackage{array}
 \usepackage{tocloft}
 \usepackage{pdfpages}
