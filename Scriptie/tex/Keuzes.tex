@@ -7,17 +7,17 @@ Dit project is gestart vanuit een nieuw concept. Om dit concept mogelijk te make
 
 \end{itemize}
 
-\section{Operating System Keuze}
-Voor Wireless Sensor Networks zijn vele operating systems (OS) beschikbaar. In deze sectie zullen meerdere met elkaar worden vergeleken en de beste gekozen. Om zeker te zijn dat het mogelijk is om er makkelijk mee te werken, wordt er alleen gekeken naar de populaire OS. Dat betekent dat het OS programmeer voorbeelden moet hebben, in het laatste jaar aan moet zijn ontwikkeld en het bekend is dat er door andere partijen actief gebruik van wordt gemaakt.
+\section{Software Keuze}
+Voor Wireless Sensor Networks zijn vele software pakketten beschikbaar. In deze sectie zullen meerdere met elkaar worden vergeleken en de beste gekozen. Om zeker te zijn dat het mogelijk is om er makkelijk mee te werken, wordt er alleen gekeken naar de populairdere oplossingen. Dat betekent dat het pakket programmeer voorbeelden moet hebben, in de laatste 2 jaren aan moet zijn ontwikkeld, of geplande verbeteringen, en het bekend is dat er door andere partijen actief gebruik van wordt gemaakt.
 
 \begin{wrapfigure}[15]{r}{0.55\textwidth}
-	\vspace{-20pt}
+	\vspace{-15pt}
 	\includegraphics[width=9cm]{../images/OSI-IEE802}
 	\caption{\emph{OSI model IEEE 802.15.4 \cite{gutierrez2004low}}} \label{fig:OSIIEEE}
 
 \end{wrapfigure}
 
-De volgende OS'en of oplossingen worden bestudeerd: ZigBee, Z-Wave, TinyOS, ContikiOS en RIOT. Voor elk onderdeel wordt beschreven hoe het systeem werkt en daarna de voordelen en nadelen uiteen gezet.
+De volgende pakketten worden bestudeerd: ZigBee, Z-Wave, TinyOS, ContikiOS en RIOT. Voor elk onderdeel wordt beschreven hoe het systeem werkt en daarna de voordelen en nadelen uiteen gezet. Als laatste wordt de gemaakte keuze beschreven.
 
 \subsection{ZigBee}
 
@@ -40,12 +40,31 @@ Het netwerk van ZigBee werkt met een centrale Coordinator die zaken als routing 
 Hoewel dit een verbetering is, geeft het niet de flexibiliteit en robuustheid voor End Devices. End Devices die als nieuw of opnieuw het netwerk moeten betreden of kunnen dat niet meer wanneer de coordinator is uitgevallen. Dit is niet praktisch bij een veiligheidsinstallatie voor branddetectie. Nodes (of Devices in het geval van ZigBee) binnen een netwerk kunnen bij brand of andere situatie uitvallen. Een ZigBee netwerk kan hiermee slecht omgaan.
 
 %ik bedoel hier dat de specificaties van zigbee niet zomaar beschikbaar zijn...
-Het is ook niet mogelijk om de netwerklaag van ZigBee aan te passen gezien het type licentie wat er aan gekoppeld zit. Verkoop van producten die ZigBee gebruiken moeten overigens ook lid zijn van de ZigBee Alliance, wat op moment van schrijven vanaf \$4.000 per jaar kost\footnote{\url{http://www.zigbee.org/Join/MembershipForms.aspx}}.
+Het is ook niet direct mogelijk om de netwerklaag van ZigBee naar wens aan te passen. Hiervoor is het nodig om lid te zijn van de ZigBee Alliance, wat op moment van schrijven vanaf \$4.000 per jaar kost\footnote{\url{http://www.zigbee.org/Join/MembershipForms.aspx}}. Dit is ook het geval als een bedrijf ZigBee gecertificeerde producten wil verkopen.
 
 \subsection{Z-Wave}
-Z-Wave is een gepattenteerde draadloze standaard ontwikkeld door Zensys en eigendom van Sigma Designs.
+Z-Wave is een gepattenteerde draadloze standaard ontwikkeld door Zensys en eigendom van Sigma Designs. Deze standaard is niet open voor iedereen, maar alleen voor klanten voor het bedrijf zelf. De Z-Wave fysieke en MAC lagen zijn inbegrepen in de G.9959 standaard van de International Telecommunications Union (ITU)\cite{ITUG9959}.
+
+Z-Wave werkt in de sub-1-GHz radio frequenties. Elk Z-Wave netwerk beschikt over een master controller die het netwerk beheert. Een netwerk kan over maximaal 232 nodes beschikken en kan worden uitgebreid door meerdere netwerken met master controllers op te zetten en die te koppelen.
+
+Chips zijn alleen te koop bij Sigma Designs, maar verkopen alleen bij grote afnemers. Er zijn meerdere bedrijven die Z-Wave producten verkopen. Deze producten zijn vooral gericht op Home Automation (b.v. Afstandbestuurbare lampen, deursloten en thermostaten).
+
+\subsubsection{Voordelen/Nadelen}
+Z-Wave is voornamelijk gericht op de Home Automation markt. Hierdoor is het mogelijk dat door deze focus Z-Wave niet toepasbaar is op dit project. In de praktijk is het namelijk zo dat een netwerk ongeveer 10 nodes ondersteunt \cite{ednZWave}.
+
+De licenties gekoppeld aan deze technologie maakt de drempel tot gebruik ook hoog. Een development kit kost \$3.000 om te kunnen werken met de standaard. Het product (wat Z-Wave gebruikt) moet eerst getest worden door Sigma Designs, waarna het legaal op de markt gezet mag worden.
+
+Z-Wave moet ook volgens de certificering koppelbaar zijn met andere Z-Wave apparaten. Dit kan een veiligheidssysteem in gevaar brengen doordat andere producten te veel invloed hebben op het netwerk.
+
 \subsection{TinyOS}
-%lang vooruitstaand OS. veel support
+TinyOS is een embedded operating system ontworpen voor low-power wireless sensor netwerken. Het is een open-source project en uitgebracht volgens het BSD-licentie\footnote{\url{http://opensource.org/licenses/BSD-3-Clause}}. Versie 1 van TinyOS is in 2002 uitgebracht tot aan versie 2.1.2 in augustus 2012. Het OS is nog steeds actief met ontwikkelingen.
+
+Applicaties die op TinyOS draaien worden geprogrammeerd in nesC\cite{nesC}. NesC is een uitbreiding op de C programmeertaal. NesC voegt mechanismen toe zodat applicaties als componenten worden geprogrammeerd.
+
+TinyOS is een op events gebaseerde non-blocking OS. Het heeft een non-preemptive scheduler en taken worden volgens de First In First Out volgorde uitgevoerd. Er is één stack beschikbaar voor alle taken binnen het systeem, wat zorgt voor weinig RAM verbruik. Verder heeft TinyOS hardware abstractie lagen, zodat ontwikkelaars makkelijker sensoren kunnen gebruiken.
+
+Voor netwerk mogelijkheden heeft TinyOS een uitgebreide set aan componenten. Voor energiebesparing van de radio component zijn er werkcycli gedefinieerd, zo zal de radio niet continu aanstaan en stroom verbruiken.
+
 % - nieuwe programmeertaal NESC
 
 % + 6LoWPAN
@@ -53,40 +72,10 @@ Z-Wave is een gepattenteerde draadloze standaard ontwikkeld door Zensys en eigen
 \subsection{ContikiOS}
 %vrije RIME protocol. compatible met 802.15.4 frames
 %simpele driver development
-%switchen van mac protocol / RDC protocol
-%maken van dit soort dingen is relatief simpel( mac / rdc ).
+%switchen van mac protocol / RDC protocol...maken van dit soort componenten is relatief simpel( mac / rdc ).
 %++++++SIMULATIE
 \subsection{RIOT}
-%nieuw/vers, weinig platformen
 
-
-Aan de hand van de requirements kan de keuze van de techniek verschillen. Energiebehoefte, bandbreedte en bereik zijn van invloed op de keuze. In deze sectie zal de gekozen oplossing worden beschreven en beargumenteerd.
-
-Wireless sensor netwerken zijn volgens de volgende punten te karakteriseren: beperkte performance, mobiel, goedkoop te produceren en lage bandbreedte eisen \cite{akyildiz2002wireless}.
-
-
-%Bij het gebruik van een draadloze verbinding wordt standaard gedacht aan een WLAN ( wireless local area network ) verbinding. In het kader van WSN's is een WLAN verbinding niet toereikbaar aangezien een WLAN verbinding vele relatief complexe requirements met zich meebrengt (lange afstanden overbruggen, hoge bandbreedte). Dit resulteert direct in duurdere hardware die veel stroom nodig hebben om de requirements te behalen. De complexiteit van een dergelijke standaard geeft ook extra restricties met zich mee, zoals het nodig hebben van genoeg opslagruimte voor de programma-code.
-
-%Het concept WPAN ( Wireless Personal Area Network ) is ontworpen om deze eigenschappen om te gooien. Dit concept maakt het mogelijk om goedkope en energie efficiënte netwerken op te zetten. Dit soort netwerk is van toepassing op dit project.
-
-%dit verwijderen?
-Gebouwd op het WPAN concept een IEEE standaard ontwikkeld die WSN's mogelijk maakt. De IEEE standaard 802.15.4 beschrijft een standaard die de bovengenoemde karakteristieken huisvest. Deze standaard beschrijft ook een energiebeheersysteem om het verbruik zo laag mogelijk te houden. Deze klasse wordt als LR-WPAN geclassificeerd (Low Rate WPAN). In figuur 4.1 is te zien hoe deze drie soorten netwerk types tegenover elkaar staan.
-
-
-De vastgestelde IEEE 802.15.4 standaard beschrijft naast de fysieke requirements ook netwerk topologieën. De standaard definieert dat een netwerk in een ster- of een peer-to-peer topologie opereert. De onderdelen binnen een dergelijk netwerk kan 2 soorten apparaten bevatten, een 'coordinator' of een reguliere 'device'. Een Coordinator binnen een netwerk is de initialisator binnen een netwerk waarbij de devices de onderdelen hiervan zijn. Binnen een ster netwerk zal voornamelijk één device horen bij één coordinator, waarbij één coordiantor met meerdere coordinatoren of devices kan communiceren.
-
-Wanneer wordt gesproken over datacommunicatie, wordt het OSI model ook meegenomen. De standaard hierboven beschreven staat alleen voor de onderste twee lagen van het OSI model; De fysieke laag en de data link laag. De lagen daarboven zijn niet gespecificeerd. wanner deze bovenste lagen worden gespecificeerd, moet rekening gehouden worden met de grenzen van de hardware binnen een WSN, die erg gelimiteerd zijn aan processorkracht of RAM geheugen.
-\\\cite{gutierrez2004low}
-
-Zoals hierboven beschreven is het gebruik van de IEEE standaard 802.15.4 vanzelfsprekend bij gebruik van een WSN. Dit is dan ook de keuze als draadloze transmissie techniek voor dit project. Deze techniek kan opereren in een van de drie radio frequentie banden:
-\begin{itemize}
-\item 868.0–868.6 MHz. (drie kanalen) Alleen in Europa beschikbaar
-\item 902-928 MHz. (dertig kanalen) Alleen in Noord Amerika beschikbaar
-\item 2400-2483.5 MHz. (zestien kanalen) Wereldwijd beschikbaar.
-\end{itemize}
-
-\section{Software}
-Zoals aangegeven in de vorige sectie en Figuur 4.2 is de keuze van een draadloze transmissie standaard nog niet alles. Er moet nog extra software komen om de volgende lagen van het OSI model op te vullen. Beschikbare oplossingen zijn: Zigbee, 6LoWPAN en RIME.
 
 \section{Hardware}
 Met gebruik van de gekozen wireless transmissie techniek, software en de requirements kan de hardware gekozen worden. 
